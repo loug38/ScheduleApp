@@ -20,10 +20,10 @@ react-native (via npm)
 npm install -g --save react-native
 ```
 
-Next, open up android studio.\n
-      1: Load the android folder as your project.\n
-      2: Debug build\n
-      3: Go to the root directory of the project and run:\n
+Next, open up android studio.
+      1. Load the android folder as your project.
+      2. Debug build
+      3. Go to the root directory of the project and run:
       
 ```sh
 react-native run-android
