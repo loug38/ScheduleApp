@@ -3,6 +3,8 @@
 This app is a scheduler for anyone that needs a way to manage clients or appointments.
 It is written in React-Native. It is focused mainly on Android, but eventually will make sure it works for iOS.
 
+![alt tag](http://www.ecreative.pl/blog/wp-content/uploads/2015/03/react2-1024x399.png)
+
 ## To use
 
 Make sure the following are installed:
