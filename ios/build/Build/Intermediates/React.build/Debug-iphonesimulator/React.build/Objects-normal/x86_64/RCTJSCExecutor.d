@@ -1,0 +1,23 @@
+dependencies: \
+  /Users/lou/Desktop/ScheduleApp/node_modules/react-native/React/Executors/RCTJSCExecutor.mm \
+  /Users/lou/Desktop/ScheduleApp/node_modules/react-native/React/Executors/RCTJSCExecutor.h \
+  /Users/lou/Desktop/ScheduleApp/node_modules/react-native/React/Base/RCTJavaScriptExecutor.h \
+  /Users/lou/Desktop/ScheduleApp/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/lou/Desktop/ScheduleApp/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/lou/Desktop/ScheduleApp/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/lou/Desktop/ScheduleApp/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/lou/Desktop/ScheduleApp/node_modules/react-native/React/Base/RCTBridge+Private.h \
+  /Users/lou/Desktop/ScheduleApp/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/lou/Desktop/ScheduleApp/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/lou/Desktop/ScheduleApp/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/lou/Desktop/ScheduleApp/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/lou/Desktop/ScheduleApp/node_modules/react-native/React/Modules/RCTDevMenu.h \
+  /Users/lou/Desktop/ScheduleApp/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/lou/Desktop/ScheduleApp/node_modules/react-native/React/Profiler/RCTProfile.h \
+  /Users/lou/Desktop/ScheduleApp/node_modules/react-native/React/Base/RCTPerformanceLogger.h \
+  /Users/lou/Desktop/ScheduleApp/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/lou/Desktop/ScheduleApp/node_modules/react-native/React/Profiler/RCTJSCProfiler.h \
+  /Users/lou/Desktop/ScheduleApp/node_modules/react-native/React/Modules/RCTRedBox.h \
+  /Users/lou/Desktop/ScheduleApp/node_modules/react-native/React/Base/RCTErrorCustomizer.h \
+  /Users/lou/Desktop/ScheduleApp/node_modules/react-native/React/Modules/RCTSourceCode.h \
+  /Users/lou/Desktop/ScheduleApp/node_modules/react-native/React/Executors/RCTJSCWrapper.h
