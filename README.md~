@@ -22,7 +22,6 @@ Next, open up android studio.
       1: Load the android folder as your project.
       2: Debug build
       3: Go to the root directory of the project and run:
-      
-```sh
-react-native run-android
-```
+      ```sh
+      react-native run-android
+      ```
