@@ -22,7 +22,7 @@ class AppNavigator extends Component{
 			case "CalendarScreen": {
 				return (
 					<CalendarScreen {...globalNavigatorProps}
-					  firebaseApp={route.ident.firebaseApp} />
+					  firebaseApp={route.ident.firebaseApp.firebaseApp} />
 				);
 				break;
 			}

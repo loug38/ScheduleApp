@@ -6,62 +6,60 @@ import Calendar from 'react-native-calendar';
 var styles = require('../StyleSheets/CalendarStyleSheet');
 
 class CalendarScreen extends Component{
-	constructor(props) {
-	  super(props);
-	  this.state = {
-	  	date: null,
-	  	dataSource: new ListView.DataSource({
-	  		rowHasChanged: (row1, row2) => row1 !== row2,
-	  	})
-	  };
-	  this.itemsRef = this.props.firebaseApp.firebaseApp.database().ref();
-	}
-
-	componentDidMount() {
-		this.listenForItems(this.itemsRef);
-	}
-
-	onDateSelect(date){
-		//fetch from db
-		this.setState({date: date});
-	}
-
-	listenForItems(itemsRef){
-		itemsRef.on('value', (snap) => {
-			var items = [];
-			snap.forEach((child) => {
-				items.push({
-					title: child.val().title,
-					_key: child.key
-				});
-			});
-
-			this.setState({
-				dataSource: this.state.dataSource.cloneWithRows(items)
-			});
-		});
-	}
-
-  _renderRow(rowInfo){
-    return(
-      <View> <Text> ROW </Text> </View>
-    );
+  constructor(props) {
+    super(props);
+    var ds = new ListView.DataSource({rowHasChanged: (r1,r2) => r1 != r2});
+    this.state = {
+      date: null,
+      dataSource: ds,
+    };
+    this.itemsRef = this.props.firebaseApp.database().ref();
   }
 
-	render(){
-		var date;
-		return(
-			<View style={styles.container}>
-				<Calendar onDateSelect={(date) => this.onDateSelect(date)}
-						  weekStart={0}	
-						  showControls={true} 
-				/>
-				<ListView dataSource={this.state.dataSource}
-						      renderRow={(rowInfo) => this._renderRow(rowInfo))}/>
-				<Text> Selected Date: {this.state.date} </Text>
-			</View>
-		);
-	}
+  componentDidMount() {
+    this.listenForItems(this.itemsRef);
+  }
+
+  listenForItems(itemsRef) {
+    itemsRef.on('value', (snap) => {
+      // get children as an array
+      var items = [];
+      snap.forEach((child) => {
+        items.push({
+          title: child.val().title,
+          _key: child.key
+        });
+      });
+
+      this.setState({
+        dataSource: this.state.dataSource.cloneWithRows(items)
+      });
+
+    });
+  }
+
+  onDateSelect(date){
+    this.setState({date: date})
+  }
+
+  _renderRow(feedRow){
+    return <View><Text>{feedRow.first}</Text></View>
+  }
+
+  render(){
+    return(
+      <View>
+        <Calendar onDateSelect={(date) => this.onDateSelect(date)}
+                  weekStart={0}
+                  showControls={true}
+        />
+        <ListView dataSource={this.state.dataSource}
+                  renderRow={(feedRow) => this._renderRow(feedRow)}
+        />
+        <Text> Selected Date: {this.state.date} </Text>
+      </View>
+    );
+  }
 }
 
 module.exports = CalendarScreen;
