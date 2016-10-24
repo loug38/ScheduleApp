@@ -1,6 +1,7 @@
 package com.scheduleapp;
 
 import com.facebook.react.ReactActivity;
+import com.evollu.react.fcm.FIRMessagingPackage;
 
 public class MainActivity extends ReactActivity {
 

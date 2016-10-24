@@ -2,6 +2,111 @@
 <items version="2" >
 
     <item
+        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-9710f5a52c96017dbb9026605eb17fa51ced6498.jar" />
+    </item>
+    <item
+        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="88848548ab56d4fbf3d2d1b0c85bf1ff9b4c1f4b">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-17140407c5f9aaeabc341c3e36a82027f32d6237.jar" />
+    </item>
+    <item
+        jar="/Users/lou/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/okhttp-3.4.1-a886d6b4458af0facd2bef798b32cab0d326bd02.jar" />
+    </item>
+    <item
+        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.33.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="86a10a3af45f2c46b8dcfcb41220821d10794699">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-857483795ad32c3cbf5ade4d0e197adbf4b548a9.jar" />
+    </item>
+    <item
+        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4b6d9b70f93bbeb872d0948bc064ae3f3f2bcbac">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-dc5ae4788d7bb96e506098e7bdaaa2f926042f2f.jar" />
+    </item>
+    <item
+        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2b8a01ad9da5d26d0067894c22e87597bca2c500">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-a534208f7d7b0bef25deea8b3ada2524b72471f9.jar" />
+    </item>
+    <item
+        jar="/Users/lou/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/library-2.4.0-4767be2e16c11932ed907ad26ed316aaf8ff3863.jar" />
+    </item>
+    <item
+        jar="/Users/lou/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0-8298c5ab232e30c9d0a17cf7f975e7d85b0b9ec4.jar" />
+    </item>
+    <item
+        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="18b5697c65c4fe5b7381613b8b8ae9ac52e26fa7">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-aad08b3cb31324f2c7c13d9f14a75ab5ea757c8f.jar" />
+    </item>
+    <item
+        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3341b66c54367e777a0647e2db96c045329bfeab">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-466f8773ec3a903df5a75fd36f703fa64344949b.jar" />
+    </item>
+    <item
+        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8a36d229011e75f0caef408e1adf0d3fd4d94e02">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-3fb0a5427b53ac3468a24f94cdd2b1b468d90d13.jar" />
+    </item>
+    <item
+        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ca63c521b5745ae9a09629d7ca67ff6bc2a967fe">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-6f04fe1ac1ed7e934c937013c42fddc2225f20ca.jar" />
+    </item>
+    <item
+        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.1-81cde5e723e1cedc8b6e689285cd6dd1c754b09f.jar" />
+    </item>
+    <item
+        jar="/Users/lou/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0-3a1bb3c13660e8980eccea22137bacbeffb2f379.jar" />
+    </item>
+    <item
+        jar="/Users/lou/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.4.1/63994437f62bc861bc20c605d12962f7246116d1/okhttp-urlconnection-3.4.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="63994437f62bc861bc20c605d12962f7246116d1">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.4.1-4bdc8eb7bca9405238afff1ce295a22d387c9e92.jar" />
+    </item>
+    <item
         jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/0.11.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
@@ -16,137 +121,11 @@
         <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-2f109de7cf373178ab38fc7dad209f2ca73454af.jar" />
     </item>
     <item
-        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
-        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-9710f5a52c96017dbb9026605eb17fa51ced6498.jar" />
-    </item>
-    <item
-        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.33.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="86a10a3af45f2c46b8dcfcb41220821d10794699">
-        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-857483795ad32c3cbf5ade4d0e197adbf4b548a9.jar" />
-    </item>
-    <item
-        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
-        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-e153c912d0481e99d17c90b818d830f79962ed6f.jar" />
-    </item>
-    <item
-        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
-        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.1-81cde5e723e1cedc8b6e689285cd6dd1c754b09f.jar" />
-    </item>
-    <item
-        jar="/Users/lou/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.4.1/63994437f62bc861bc20c605d12962f7246116d1/okhttp-urlconnection-3.4.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="63994437f62bc861bc20c605d12962f7246116d1">
-        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.4.1-4bdc8eb7bca9405238afff1ce295a22d387c9e92.jar" />
-    </item>
-    <item
-        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/0.11.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="ca63c521b5745ae9a09629d7ca67ff6bc2a967fe">
-        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-6f04fe1ac1ed7e934c937013c42fddc2225f20ca.jar" />
-    </item>
-    <item
-        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/0.11.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="98786c1770b531b9194fb6448b2a2692c64074b6">
-        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-480887933b362bb262ad9dd6fa85c950f1610c5c.jar" />
-    </item>
-    <item
-        jar="/Users/lou/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0-8298c5ab232e30c9d0a17cf7f975e7d85b0b9ec4.jar" />
-    </item>
-    <item
-        jar="/Users/lou/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.4.1/8ace66ef7002d98f633377c9e67daeeb196d8c3b/okhttp-ws-3.4.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
-        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-3.4.1-d5f2d63e22147fe980f7cbafeed896eefff295b6.jar" />
-    </item>
-    <item
-        jar="/Users/lou/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
-        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/library-2.4.0-4767be2e16c11932ed907ad26ed316aaf8ff3863.jar" />
-    </item>
-    <item
-        jar="/Users/lou/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/javax.inject-1-1730b4c732e40fdc4556d3e1029dad9d8e2b8eef.jar" />
-    </item>
-    <item
-        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/0.11.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="2b8a01ad9da5d26d0067894c22e87597bca2c500">
-        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-a534208f7d7b0bef25deea8b3ada2524b72471f9.jar" />
-    </item>
-    <item
-        jar="/Users/lou/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0-3a1bb3c13660e8980eccea22137bacbeffb2f379.jar" />
-    </item>
-    <item
-        jar="/Users/lou/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.3/1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14/jackson-core-2.2.3.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14">
-        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/jackson-core-2.2.3-8eb914da9b1d6c3868a42cbc39e8eeb9059bcb17.jar" />
-    </item>
-    <item
-        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.33.0/jars/libs/infer-annotations-1.5.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="849357db0dcadfb604ea1ec3a185b276d98e997c">
-        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/infer-annotations-1.5-336dc2fd7e630735c939d7ee69a9f967d8ad09ef.jar" />
-    </item>
-    <item
-        jar="/Users/lou/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
-        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/okio-1.9.0-25881537628c2d67766daca5fad21d6d808b14aa.jar" />
-    </item>
-    <item
-        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.11.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="3341b66c54367e777a0647e2db96c045329bfeab">
-        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-466f8773ec3a903df5a75fd36f703fa64344949b.jar" />
-    </item>
-    <item
-        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-f9411084e1517a2848f1db7658911df65594f797.jar" />
-    </item>
-    <item
-        jar="/Users/lou/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
-        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/okhttp-3.4.1-a886d6b4458af0facd2bef798b32cab0d326bd02.jar" />
+        sha1="3b7173b3df4c7029699919414400041f64519e34">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-b8e3aaa027e03e0f848add176ca31b7d12c1b836.jar" />
     </item>
     <item
         jar="/Users/lou/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
@@ -161,6 +140,83 @@
         revision="23.0.1"
         sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
         <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-60d32c16faa2084c8788244b3c6c593e9b16efc5.jar" />
+    </item>
+    <item
+        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="98786c1770b531b9194fb6448b2a2692c64074b6">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-480887933b362bb262ad9dd6fa85c950f1610c5c.jar" />
+    </item>
+    <item
+        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-e153c912d0481e99d17c90b818d830f79962ed6f.jar" />
+    </item>
+    <item
+        jar="/Users/lou/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.4.1/8ace66ef7002d98f633377c9e67daeeb196d8c3b/okhttp-ws-3.4.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-3.4.1-d5f2d63e22147fe980f7cbafeed896eefff295b6.jar" />
+    </item>
+    <item
+        jar="/Users/lou/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/okio-1.9.0-25881537628c2d67766daca5fad21d6d808b14aa.jar" />
+    </item>
+    <item
+        jar="/Users/lou/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/javax.inject-1-1730b4c732e40fdc4556d3e1029dad9d8e2b8eef.jar" />
+    </item>
+    <item
+        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a440fb3fec30ff925e9f601cc458fb6671834cb2">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-acf17cf92226301e52dae36eb5a4b30d7ccd01d7.jar" />
+    </item>
+    <item
+        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-f9411084e1517a2848f1db7658911df65594f797.jar" />
+    </item>
+    <item
+        jar="/Users/lou/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.3/1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14/jackson-core-2.2.3.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/jackson-core-2.2.3-8eb914da9b1d6c3868a42cbc39e8eeb9059bcb17.jar" />
+    </item>
+    <item
+        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/ScheduleApp/react-native-fcm/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a7335ff1d07cab6f8bee12409a3943dd517e59f2">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-14460738ef9e7629544e3a61dc41706b36c4a4dd.jar" />
+    </item>
+    <item
+        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="618485fef3ebe12127f7622abbc9b5b39057b5c2">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/classes-7aab0df2a06152d0e5131b6de1058978b1643094.jar" />
+    </item>
+    <item
+        jar="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.33.0/jars/libs/infer-annotations-1.5.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="849357db0dcadfb604ea1ec3a185b276d98e997c">
+        <dex dex="/Users/lou/Desktop/ScheduleApp/android/app/build/intermediates/pre-dexed/debug/infer-annotations-1.5-336dc2fd7e630735c939d7ee69a9f967d8ad09ef.jar" />
     </item>
 
 </items>

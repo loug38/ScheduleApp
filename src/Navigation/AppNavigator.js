@@ -18,10 +18,11 @@ class AppNavigator extends Component{
 
 	_renderScene(route, navigator){
 		var globalNavigatorProps = {navigator}
-		switch(route.ident){
+		switch(route.ident.ident){
 			case "CalendarScreen": {
 				return (
-					<CalendarScreen {...globalNavigatorProps} />
+					<CalendarScreen {...globalNavigatorProps}
+					  firebaseApp={route.ident.firebaseApp} />
 				);
 				break;
 			}
