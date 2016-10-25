@@ -54,7 +54,7 @@ class CalendarScreen extends Component{
                   showControls={true}
         />
         <ListView dataSource={this.state.dataSource}
-                  renderRow={(feedRow) => this._renderRow(feedRow)}
+                  renderRow={(feedRow) => { return this._renderRow(feedRow)}}
         />
         <Text> Selected Date: {this.state.date} </Text>
       </View>
