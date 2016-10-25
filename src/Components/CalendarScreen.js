@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, ListView} from 'react-native';
+import {StyleSheet, Text, View, ListView, StatusBar} from 'react-native';
 
 import Calendar from 'react-native-calendar';
 
@@ -13,7 +13,11 @@ class CalendarScreen extends Component{
       date: null,
       dataSource: ds,
     };
-    this.itemsRef = this.props.firebaseApp.database().ref();
+    this.itemsRef = this.getRef().child('stuff');
+  }
+
+  getRef(){
+    return this.props.firebaseApp.database().ref();
   }
 
   componentDidMount() {
@@ -49,6 +53,8 @@ class CalendarScreen extends Component{
   render(){
     return(
       <View>
+        <StatusBar barStyle='light-content' />
+        <View style={{height: 20, backgroundColor: "#B71C1C"}} />
         <Calendar onDateSelect={(date) => this.onDateSelect(date)}
                   weekStart={0}
                   showControls={true}
