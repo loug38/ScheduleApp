@@ -27,13 +27,13 @@ class CalendarScreen extends Component{
 
   listenForItems(itemsRef) {
     itemsRef.on('value', (snap) => {
-      // get children as an array
       var items = [];
       snap.forEach((child) => {
         items.push({
           Date: child.val().Date,
           Name: child.val().Name,
           Phone: child.val().Phone,
+          Time: child.val().Time,
         });
       });
 
@@ -48,20 +48,21 @@ class CalendarScreen extends Component{
   }
 
   onAddAppointment(){
-    return
+    return(
       <Modal
             transparent={false}
             visible={true}
       >
         <View><Text> Hey </Text></View>
       </Modal>
+    );
   }
 
   _renderRow(feedRow){
     return (
       <View style={styles.li}>
         <Text>
-        {`Name: ${feedRow.Name}\nDate: ${feedRow.Date}\nPhone: ${feedRow.Phone}`}
+        {`Name: ${feedRow.Name}\nDate: ${feedRow.Date}\nTime: ${feedRow.Time}\nPhone: ${feedRow.Phone}`}
         </Text>
       </View> 
     );
@@ -81,8 +82,8 @@ class CalendarScreen extends Component{
                   enableEmptySections={true}
                   style={styles.listView}
         />
-        <Text> Selected Date: {this.state.date} </Text>
-        <Button style={styles.addButton} onPress={this.onAddAppointment()}> Add Appointment </Button>
+        {/* <Text> Selected Date: {this.state.date} </Text> */}
+        <Button style={styles.addButton} onPress={() => {this.onAddAppointment()}}> Add Appointment </Button>
       </View>
     );
   }

@@ -22,6 +22,8 @@ module.exports = StyleSheet.create({
 		paddingBottom: 20,
 		borderBottomWidth: 1,
 		borderBottomColor: '#dddddd',
+		borderTopLeftRadius: 20,
+		borderTopRightRadius: 20,
 	},
 
 	addButton: {
