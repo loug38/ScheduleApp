@@ -30,15 +30,14 @@ class CalendarScreen extends Component{
       var items = [];
       snap.forEach((child) => {
         items.push({
-          title: child.val().title,
-          _key: child.key
+          first: child.val().first,
+          second: child.second
         });
       });
 
       this.setState({
         dataSource: this.state.dataSource.cloneWithRows(items)
       });
-
     });
   }
 
