@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, ListView, StatusBar} from 'react-native';
+import {StyleSheet, Text, View, ListView, StatusBar, Modal} from 'react-native';
 
 import Calendar from 'react-native-calendar';
 import {Button} from 'native-base';
@@ -31,8 +31,9 @@ class CalendarScreen extends Component{
       var items = [];
       snap.forEach((child) => {
         items.push({
-          first: child.val().first,
-          second: child.second
+          Date: child.val().Date,
+          Name: child.val().Name,
+          Phone: child.val().Phone,
         });
       });
 
@@ -46,8 +47,24 @@ class CalendarScreen extends Component{
     this.setState({date: date})
   }
 
+  onAddAppointment(){
+    return
+      <Modal
+            transparent={false}
+            visible={true}
+      >
+        <View><Text> Hey </Text></View>
+      </Modal>
+  }
+
   _renderRow(feedRow){
-    return <View style={styles.li}><Text>{feedRow.first}</Text></View>
+    return (
+      <View style={styles.li}>
+        <Text>
+        {`Name: ${feedRow.Name}\nDate: ${feedRow.Date}\nPhone: ${feedRow.Phone}`}
+        </Text>
+      </View> 
+    );
   }
 
   render(){
@@ -65,7 +82,7 @@ class CalendarScreen extends Component{
                   style={styles.listView}
         />
         <Text> Selected Date: {this.state.date} </Text>
-        <Button style={styles.addButton}> Add Appointment </Button>
+        <Button style={styles.addButton} onPress={this.onAddAppointment()}> Add Appointment </Button>
       </View>
     );
   }

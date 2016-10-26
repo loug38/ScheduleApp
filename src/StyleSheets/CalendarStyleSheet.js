@@ -16,8 +16,7 @@ module.exports = StyleSheet.create({
 
 	li: {
 		flex: 2,
-		alignItems: 'center',
-		paddingLeft: 5,
+		paddingLeft: 10,
 		paddingRight: 5,
 		paddingTop: 20,
 		paddingBottom: 20,
