@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {StyleSheet, Text, View, ListView, StatusBar} from 'react-native';
 
 import Calendar from 'react-native-calendar';
+import {Button} from 'native-base';
 
 var styles = require('../StyleSheets/CalendarStyleSheet');
 
@@ -46,12 +47,12 @@ class CalendarScreen extends Component{
   }
 
   _renderRow(feedRow){
-    return <View><Text>{feedRow.first}</Text></View>
+    return <View style={styles.li}><Text>{feedRow.first}</Text></View>
   }
 
   render(){
     return(
-      <View>
+      <View style={styles.container}>
         <StatusBar barStyle='light-content' />
         <View style={{height: 20, backgroundColor: "#B71C1C"}} />
         <Calendar onDateSelect={(date) => this.onDateSelect(date)}
@@ -60,8 +61,11 @@ class CalendarScreen extends Component{
         />
         <ListView dataSource={this.state.dataSource}
                   renderRow={(feedRow) => { return this._renderRow(feedRow)}}
+                  enableEmptySections={true}
+                  style={styles.listView}
         />
         <Text> Selected Date: {this.state.date} </Text>
+        <Button style={styles.addButton}> Add Appointment </Button>
       </View>
     );
   }

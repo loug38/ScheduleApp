@@ -4,5 +4,32 @@ import {StyleSheet} from 'react-native';
 module.exports = StyleSheet.create({
 	container: {
 		flex: 1,
+		backgroundColor: '#f7f7f7',
 	},
+
+	listView: {
+		flex: 1,
+		backgroundColor: 'white',
+		borderTopLeftRadius: 20,
+		borderTopRightRadius: 20,
+	},
+
+	li: {
+		flex: 2,
+		alignItems: 'center',
+		paddingLeft: 5,
+		paddingRight: 5,
+		paddingTop: 20,
+		paddingBottom: 20,
+		borderBottomWidth: 1,
+		borderBottomColor: '#dddddd',
+	},
+
+	addButton: {
+		alignSelf: 'stretch',
+		justifyContent: 'center',
+		height: 50,
+		borderRadius: 0,
+		backgroundColor: '#B71C1C',
+	}
 });
