@@ -33,17 +33,4 @@ module.exports = StyleSheet.create({
 		borderRadius: 0,
 		backgroundColor: '#B71C1C',
 	},
-
-	modal: {
-		flex: 1,
-		flexDirection: 'row',
-		justifyContent: 'center',
-		alignItems: 'center',
-		backgroundColor: '#00000044',
-	},
-
-	modalInputRow: {
-		flex: 1,
-		flexDirection: 'row',
-	},
 });

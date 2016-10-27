@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, ListView, StatusBar, Modal,
-        TextInput} from 'react-native';
+import {StyleSheet, Text, View, ListView, StatusBar, Modal, TextInput} from 'react-native';
 
 import Calendar from 'react-native-calendar';
 import {Button} from 'native-base';
+
+import AddAppointmentModal from './AddAppointmentModal';
 
 var styles = require('../StyleSheets/CalendarStyleSheet');
 
@@ -15,6 +16,7 @@ class CalendarScreen extends Component{
       date: null,
       dataSource: ds,
       modalEnable: false,
+      newAptName: null,
     };
     this.itemsRef = this.getRef().child('stuff');
   }
@@ -66,18 +68,7 @@ class CalendarScreen extends Component{
   render(){
     return(
       <View style={styles.container}>
-      <Modal animationType={"fade"}
-             transparent={true}
-             visible={this.state.modalEnable}
-      >
-        <View style={styles.modal}>
-          <Text> Add a new appointment </Text>
-          <View style={styles.modalInputRow}>
-            <Text> Name: </Text>
-            <TextInput onChangeText={() => this.handleChange} />
-          </View> 
-        </View>
-      </Modal>
+        <AddAppointmentModal modalEnable={this.state.modalEnable} />
         <StatusBar barStyle='light-content' />
         <View style={{height: 20, backgroundColor: "#B71C1C"}} />
         <Calendar onDateSelect={(date) => this.onDateSelect(date)}
