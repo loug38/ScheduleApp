@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, ListView, StatusBar, Modal} from 'react-native';
+import {StyleSheet, Text, View, ListView, StatusBar, Modal,
+        TextInput} from 'react-native';
 
 import Calendar from 'react-native-calendar';
 import {Button} from 'native-base';
@@ -13,6 +14,7 @@ class CalendarScreen extends Component{
     this.state = {
       date: null,
       dataSource: ds,
+      modalEnable: false,
     };
     this.itemsRef = this.getRef().child('stuff');
   }
@@ -48,14 +50,7 @@ class CalendarScreen extends Component{
   }
 
   onAddAppointment(){
-    return(
-      <Modal
-            transparent={false}
-            visible={true}
-      >
-        <View><Text> Hey </Text></View>
-      </Modal>
-    );
+    this.setState({modalEnable: true});
   }
 
   _renderRow(feedRow){
@@ -71,6 +66,18 @@ class CalendarScreen extends Component{
   render(){
     return(
       <View style={styles.container}>
+      <Modal animationType={"fade"}
+             transparent={true}
+             visible={this.state.modalEnable}
+      >
+        <View style={styles.modal}>
+          <Text> Add a new appointment </Text>
+          <View style={styles.modalInputRow}>
+            <Text> Name: </Text>
+            <TextInput onChangeText={() => this.handleChange} />
+          </View> 
+        </View>
+      </Modal>
         <StatusBar barStyle='light-content' />
         <View style={{height: 20, backgroundColor: "#B71C1C"}} />
         <Calendar onDateSelect={(date) => this.onDateSelect(date)}
@@ -83,7 +90,9 @@ class CalendarScreen extends Component{
                   style={styles.listView}
         />
         {/* <Text> Selected Date: {this.state.date} </Text> */}
-        <Button style={styles.addButton} onPress={() => {this.onAddAppointment()}}> Add Appointment </Button>
+        <Button style={styles.addButton} onPress={() => {this.onAddAppointment()}}>
+          Add Appointment 
+        </Button>
       </View>
     );
   }
