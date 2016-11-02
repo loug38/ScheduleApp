@@ -74,7 +74,6 @@ class CalendarScreen extends Component{
 
   render(){
     statusBarHeight = (Platform.OS === 'ios') ? 20 : 0;
-
     // Normal screen.
     if (fetched){
       return(
