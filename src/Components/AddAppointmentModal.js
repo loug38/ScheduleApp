@@ -13,7 +13,6 @@ class AddAppointmentModal extends Component {
       Name: null,
       Time:  null,
       PhoneNumber: null,
-      visibility: true,
     };
   }
 
@@ -22,7 +21,7 @@ class AddAppointmentModal extends Component {
   };
 
   _exitModal(){
-    this.state.visibility = false;
+    this.props.self.closeModal();
     return;
   }
 
@@ -82,6 +81,7 @@ class AddAppointmentModal extends Component {
                 Add
               </Button>
             </View>
+
           </View>
         </View>
       </Modal>

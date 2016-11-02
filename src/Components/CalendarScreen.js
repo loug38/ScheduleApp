@@ -58,6 +58,10 @@ class CalendarScreen extends Component{
     this.setState({modalEnable: true});
   }
 
+  closeModal(){
+    this.setState({modalEnable: false});
+  }
+
   _renderRow(feedRow){
     return (
       <View style={styles.li}>
@@ -75,7 +79,7 @@ class CalendarScreen extends Component{
     if (fetched){
       return(
         <View style={styles.container}>
-          <AddAppointmentModal modalEnable={this.state.modalEnable} />
+          <AddAppointmentModal modalEnable={this.state.modalEnable} self={this}/>
           <StatusBar barStyle='light-content' />
           <View style={{height: statusBarHeight, backgroundColor: "#B71C1C"}} />
           <Calendar onDateSelect={(date) => this.onDateSelect(date)}
