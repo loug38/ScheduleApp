@@ -25,7 +25,7 @@ module.exports = StyleSheet.create({
 
 	modalTitle: {
 		fontSize: 20,
-		marginBottom: 20,
+		marginBottom: 15,
 		paddingLeft: 20,
 	},
 
@@ -41,6 +41,7 @@ module.exports = StyleSheet.create({
 
 	modalInputWrapper: {
 		flex: 1,
+		marginLeft: 10,
 	},
 
 	buttonContainer: {
@@ -48,7 +49,7 @@ module.exports = StyleSheet.create({
 		flexDirection: 'row',
 		alignItems: 'stretch',
 		justifyContent: 'flex-end',
-		marginTop: 20,
+		marginTop: 30,
 		marginBottom: -3,
 	},
 

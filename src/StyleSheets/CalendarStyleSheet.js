@@ -26,6 +26,12 @@ module.exports = StyleSheet.create({
 		borderTopRightRadius: 20,
 	},
 
+	loadingText: {
+		color: '#B71C1C',
+		alignSelf: 'center', 
+		marginTop: 100,
+	},
+
 	addButton: {
 		alignSelf: 'stretch',
 		justifyContent: 'center',

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, ListView, StatusBar, Modal, TextInput} from 'react-native';
+import {StyleSheet, Text, View, ListView, StatusBar, 
+        Modal, TextInput, Platform} from 'react-native';
 
 import Calendar from 'react-native-calendar';
 import {Button, Spinner} from 'native-base';
@@ -7,6 +8,7 @@ import AddAppointmentModal from './AddAppointmentModal';
 
 var styles = require('../StyleSheets/CalendarStyleSheet');
 var fetched = false;
+var statusBarHeight = null;
 
 class CalendarScreen extends Component{
   constructor(props) {
@@ -67,12 +69,15 @@ class CalendarScreen extends Component{
   }
 
   render(){
+    statusBarHeight = (Platform.OS === 'ios') ? 20 : 0;
+
+    // Normal screen.
     if (fetched){
       return(
         <View style={styles.container}>
           <AddAppointmentModal modalEnable={this.state.modalEnable} />
           <StatusBar barStyle='light-content' />
-          <View style={{height: 20, backgroundColor: "#B71C1C"}} />
+          <View style={{height: statusBarHeight, backgroundColor: "#B71C1C"}} />
           <Calendar onDateSelect={(date) => this.onDateSelect(date)}
                     weekStart={0}
                     showControls={true}
@@ -88,16 +93,18 @@ class CalendarScreen extends Component{
           </Button>
         </View>
       );
+    // Loading appointments screen
     } else {
       return(
         <View style={styles.container}>
           <StatusBar barStyle='light-content' />
-          <View style={{height: 20, backgroundColor: "#B71C1C"}} />
+          <View style={{height: statusBarHeight, backgroundColor: "#B71C1C"}} />
           <Calendar onDateSelect={(date) => this.onDateSelect(date)}
                     weekStart={0}
                     showControls={true}
           />
           <View style={{flex: 1, backgroundColor: '#ffffff'}}>
+            <Text style={styles.loadingText}> Loading your appointments. </Text>
             <Spinner color='#B71C1C' />
             <View style={styles.listView} />
             <Button style={styles.addButton} onPress={() => {this.onAddAppointment()}}>

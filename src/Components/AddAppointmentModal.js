@@ -36,9 +36,11 @@ class AddAppointmentModal extends Component {
         <View style={styles.modal}>
           <View style={styles.modalInputContainer}>
             <Text style={styles.modalTitle}> Add a new appointment </Text>
+
             {/* Name input */}
             <View style={styles.modalInputRow}>
-              <MaterialIcons name="person-outline" size={30} color='#aaaaaa' />
+              <MaterialIcons name="person-outline" size={30} color='#aaaaaa'
+                             style={{marginTop: 10}} />
               <View style={styles.modalInputWrapper}>
                 <InputGroup>
                   <Input placeholder='Name' 
@@ -49,7 +51,8 @@ class AddAppointmentModal extends Component {
 
             {/* Time input */}
             <View style={styles.modalInputRow}>
-              <MaterialIcons name="access-time" size={30} color='#aaaaaa' />
+              <MaterialIcons name="access-time" size={30} color='#aaaaaa' 
+                             style={{marginTop: 10}}/>
               <View style={styles.modalInputWrapper}>
                 <InputGroup>
                   <Input placeholder='Time' 
@@ -57,9 +60,11 @@ class AddAppointmentModal extends Component {
                 </InputGroup>
               </View>
             </View>
+
             {/* Phone Number */}
             <View style={styles.modalInputRow}>
-              <MaterialIcons name="phone" size={30} color='#aaaaaa' />
+              <MaterialIcons name="phone" size={30} color='#aaaaaa' 
+                             style={{marginTop: 10}}/>
               <View style={styles.modalInputWrapper}>
                <InputGroup>
                   <Input placeholder='Phone' 
@@ -67,6 +72,8 @@ class AddAppointmentModal extends Component {
                 </InputGroup>
               </View>
             </View>
+            
+            {/* Buttons on the bottom */}
             <View style={styles.buttonContainer}>
               <Button style={styles.modalButtonCancel} onPress={() => this._exitModal()}>
                 Cancel
