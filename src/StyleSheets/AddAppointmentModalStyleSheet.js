@@ -39,22 +39,8 @@ module.exports = StyleSheet.create({
 		paddingRight: 20,
 	},
 
-	modalInput: {
-		flex: 1,
-		alignSelf: 'stretch',
-		height: 10,
-		paddingLeft: 10,
-		borderBottomWidth: 0,
-	},
-
 	modalInputWrapper: {
 		flex: 1,
-		alignItems: 'center',
-		borderBottomWidth: 1,
-		borderBottomColor: '#aaaaaa',
-		height: 20,
-		padding: 3,
-		marginTop: 5,
 	},
 
 	buttonContainer: {
@@ -63,27 +49,24 @@ module.exports = StyleSheet.create({
 		alignItems: 'stretch',
 		justifyContent: 'flex-end',
 		marginTop: 20,
+		marginBottom: -3,
 	},
 
 	modalButtonCancel: {
 		flex: 1,
-		borderBottomLeftRadius: 25,
+		borderBottomLeftRadius: 20,
 		borderBottomRightRadius: 0,
 		borderTopLeftRadius: 0,
 		borderTopRightRadius: 0,
-		padding: 5,
-		marginBottom: 5,
-		backgroundColor: '#B71C1C'
+		backgroundColor: '#B71C1C',
 	},
 
 	modalButtonAdd: {
 		flex: 1,
 		borderBottomLeftRadius: 0,
-		borderBottomRightRadius: 25,
+		borderBottomRightRadius: 20,
 		borderTopLeftRadius: 0,
 		borderTopRightRadius: 0,
-		marginBottom: 5,
-		padding: 5,
 		backgroundColor: '#B71C1C'		
 	},
 });

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text, TextInput, Modal} from 'react-native';
 
-import {Button} from 'native-base';
+import {Button, Input, InputGroup} from 'native-base';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 var styles = require('../StyleSheets/AddAppointmentModalStyleSheet');
@@ -13,6 +13,7 @@ class AddAppointmentModal extends Component {
       Name: null,
       Time:  null,
       PhoneNumber: null,
+      visibility: true,
     };
   }
 
@@ -21,6 +22,7 @@ class AddAppointmentModal extends Component {
   };
 
   _exitModal(){
+    this.state.visibility = false;
     return;
   }
 
@@ -33,38 +35,36 @@ class AddAppointmentModal extends Component {
       >
         <View style={styles.modal}>
           <View style={styles.modalInputContainer}>
-            <View style={{flex: 1, alignItems: 'center'}}>
             <Text style={styles.modalTitle}> Add a new appointment </Text>
-            </View>
             {/* Name input */}
             <View style={styles.modalInputRow}>
               <MaterialIcons name="person-outline" size={30} color='#aaaaaa' />
-                <View style={styles.modalInputWrapper}>
-                <TextInput style={styles.modalInput}
-                           onChangeText={(text) => this.setState({Name: text})}
-                           placeholder='Name'
-                />
+              <View style={styles.modalInputWrapper}>
+                <InputGroup>
+                  <Input placeholder='Name' 
+                         onChangeText={(text) => this.setState({Name: text})}/>
+                </InputGroup>
                 </View>
             </View>
 
             {/* Time input */}
             <View style={styles.modalInputRow}>
-              <Text style={{paddingTop: 3}}> Time: </Text>
+              <MaterialIcons name="access-time" size={30} color='#aaaaaa' />
               <View style={styles.modalInputWrapper}>
-                <TextInput style={styles.modalInput}
-                           onChangeText={(text) => this.setState({Time: text})}
-                           placeholder='Time'
-                />
+                <InputGroup>
+                  <Input placeholder='Time' 
+                         onChangeText={(text) => this.setState({Time: text})}/>
+                </InputGroup>
               </View>
             </View>
             {/* Phone Number */}
             <View style={styles.modalInputRow}>
-              <Text style={{paddingTop: 3}}> Phone: </Text>
+              <MaterialIcons name="phone" size={30} color='#aaaaaa' />
               <View style={styles.modalInputWrapper}>
-                <TextInput style={styles.modalInput}
-                           onChangeText={(text) => this.setState({PhoneNumber: text})}
-                           placeholder='Just digits'
-                />
+               <InputGroup>
+                  <Input placeholder='Phone' 
+                         onChangeText={(text) => this.setState({PhoneNumber: text})}/>
+                </InputGroup>
               </View>
             </View>
             <View style={styles.buttonContainer}>
@@ -76,8 +76,6 @@ class AddAppointmentModal extends Component {
               </Button>
             </View>
           </View>
-{/*       
-        */}
         </View>
       </Modal>
     );

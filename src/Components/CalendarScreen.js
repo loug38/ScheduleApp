@@ -2,10 +2,11 @@ import React, {Component} from 'react';
 import {StyleSheet, Text, View, ListView, StatusBar, Modal, TextInput} from 'react-native';
 
 import Calendar from 'react-native-calendar';
-import {Button} from 'native-base';
+import {Button, Spinner} from 'native-base';
 import AddAppointmentModal from './AddAppointmentModal';
 
 var styles = require('../StyleSheets/CalendarStyleSheet');
+var fetched = false;
 
 class CalendarScreen extends Component{
   constructor(props) {
@@ -44,6 +45,7 @@ class CalendarScreen extends Component{
         dataSource: this.state.dataSource.cloneWithRows(items)
       });
     });
+    fetched = true;
   }
 
   onDateSelect(date){
@@ -65,26 +67,46 @@ class CalendarScreen extends Component{
   }
 
   render(){
-    return(
-      <View style={styles.container}>
-        <AddAppointmentModal modalEnable={this.state.modalEnable} />
-        <StatusBar barStyle='light-content' />
-        <View style={{height: 20, backgroundColor: "#B71C1C"}} />
-        <Calendar onDateSelect={(date) => this.onDateSelect(date)}
-                  weekStart={0}
-                  showControls={true}
-        />
-        <ListView dataSource={this.state.dataSource}
-                  renderRow={(feedRow) => { return this._renderRow(feedRow)}}
-                  enableEmptySections={true}
-                  style={styles.listView}
-        />
-        {/* <Text> Selected Date: {this.state.date} </Text> */}
-        <Button style={styles.addButton} onPress={() => {this.onAddAppointment()}}>
-          Add Appointment 
-        </Button>
-      </View>
-    );
+    if (fetched){
+      return(
+        <View style={styles.container}>
+          <AddAppointmentModal modalEnable={this.state.modalEnable} />
+          <StatusBar barStyle='light-content' />
+          <View style={{height: 20, backgroundColor: "#B71C1C"}} />
+          <Calendar onDateSelect={(date) => this.onDateSelect(date)}
+                    weekStart={0}
+                    showControls={true}
+          />
+          <ListView dataSource={this.state.dataSource}
+                    renderRow={(feedRow) => { return this._renderRow(feedRow)}}
+                    enableEmptySections={true}
+                    style={styles.listView}
+          />
+          {/* <Text> Selected Date: {this.state.date} </Text> */}
+          <Button style={styles.addButton} onPress={() => {this.onAddAppointment()}}>
+            Add Appointment 
+          </Button>
+        </View>
+      );
+    } else {
+      return(
+        <View style={styles.container}>
+          <StatusBar barStyle='light-content' />
+          <View style={{height: 20, backgroundColor: "#B71C1C"}} />
+          <Calendar onDateSelect={(date) => this.onDateSelect(date)}
+                    weekStart={0}
+                    showControls={true}
+          />
+          <View style={{flex: 1, backgroundColor: '#ffffff'}}>
+            <Spinner color='#B71C1C' />
+            <View style={styles.listView} />
+            <Button style={styles.addButton} onPress={() => {this.onAddAppointment()}}>
+              Add Appointment 
+            </Button>
+          </View>
+        </View>        
+      );
+    }
   }
 }
 
