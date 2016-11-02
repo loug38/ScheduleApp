@@ -1,7 +1,7 @@
 package com.scheduleapp;
 
 import com.facebook.react.ReactActivity;
-import com.evollu.react.fcm.FIRMessagingPackage;
+import com.oblador.vectoricons.VectorIconsPackage;
 
 public class MainActivity extends ReactActivity {
 

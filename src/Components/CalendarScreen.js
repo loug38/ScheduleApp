@@ -3,7 +3,6 @@ import {StyleSheet, Text, View, ListView, StatusBar, Modal, TextInput} from 'rea
 
 import Calendar from 'react-native-calendar';
 import {Button} from 'native-base';
-
 import AddAppointmentModal from './AddAppointmentModal';
 
 var styles = require('../StyleSheets/CalendarStyleSheet');

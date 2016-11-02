@@ -5,34 +5,46 @@ module.exports = StyleSheet.create({
 
 	modal: {
 		flex: 1,
-		flexDirection: 'row',
+		flexDirection: 'column',
+		alignItems: 'center',
 		justifyContent: 'center',
-		alignItems: 'flex-start',
 		backgroundColor: '#00000099',
 	},
 
 	modalInputContainer: {
 		backgroundColor: '#ffffff',
 		alignItems: 'flex-start',
-		margin: 55,
-		padding: 20,
+		justifyContent: 'flex-start',
+		marginTop: 55,
+		marginBottom: 55,
+		marginLeft: 25,
+		marginRight: 25,
+		paddingTop: 20,
 		borderRadius: 20,
 	},
 
 	modalTitle: {
 		fontSize: 20,
+		marginBottom: 20,
+		paddingLeft: 20,
 	},
 
 	modalInputRow: {
 		flex: 1,
 		flexDirection: 'row',
 		alignItems: 'flex-start',
-		marginTop: 20,
+		marginTop: 10,
+		marginBottom: 10,
+		paddingLeft: 20,
+		paddingRight: 20,
 	},
 
 	modalInput: {
 		flex: 1,
+		alignSelf: 'stretch',
 		height: 10,
+		paddingLeft: 10,
+		borderBottomWidth: 0,
 	},
 
 	modalInputWrapper: {
@@ -42,5 +54,36 @@ module.exports = StyleSheet.create({
 		borderBottomColor: '#aaaaaa',
 		height: 20,
 		padding: 3,
-	}
+		marginTop: 5,
+	},
+
+	buttonContainer: {
+		flex: 1,
+		flexDirection: 'row',
+		alignItems: 'stretch',
+		justifyContent: 'flex-end',
+		marginTop: 20,
+	},
+
+	modalButtonCancel: {
+		flex: 1,
+		borderBottomLeftRadius: 25,
+		borderBottomRightRadius: 0,
+		borderTopLeftRadius: 0,
+		borderTopRightRadius: 0,
+		padding: 5,
+		marginBottom: 5,
+		backgroundColor: '#B71C1C'
+	},
+
+	modalButtonAdd: {
+		flex: 1,
+		borderBottomLeftRadius: 0,
+		borderBottomRightRadius: 25,
+		borderTopLeftRadius: 0,
+		borderTopRightRadius: 0,
+		marginBottom: 5,
+		padding: 5,
+		backgroundColor: '#B71C1C'		
+	},
 });
