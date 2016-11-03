@@ -15,12 +15,12 @@ class CalendarScreen extends Component{
     super(props);
     var ds = new ListView.DataSource({rowHasChanged: (r1,r2) => r1 != r2});
     this.state = {
-      date: null,
+      date: Date.now(),
       dataSource: ds,
       modalEnable: false,
       newAptName: null,
     };
-    this.itemsRef = this.getRef().child('stuff');
+    this.itemsRef = this.getRef().child('appointments');
   }
 
   getRef(){
@@ -48,6 +48,16 @@ class CalendarScreen extends Component{
       });
     });
     fetched = true;
+  }
+
+  addAppointment(name, time, phone) {
+    this.itemsRef.push({
+      Name: name,
+      Time: time,
+      Phone: phone,
+      Date: this.state.date,
+    });
+    this.setState({modalEnable: false});
   }
 
   onDateSelect(date){
@@ -78,6 +88,7 @@ class CalendarScreen extends Component{
     if (fetched){
       return(
         <View style={styles.container}>
+          {/* Pass it "this" so it has a reference to the parent state */}
           <AddAppointmentModal modalEnable={this.state.modalEnable} self={this}/>
           <StatusBar barStyle='light-content' />
           <View style={{height: statusBarHeight, backgroundColor: "#B71C1C"}} />
@@ -90,12 +101,12 @@ class CalendarScreen extends Component{
                     enableEmptySections={true}
                     style={styles.listView}
           />
-          {/* <Text> Selected Date: {this.state.date} </Text> */}
           <Button style={styles.addButton} onPress={() => {this.onAddAppointment()}}>
             Add Appointment 
           </Button>
         </View>
       );
+
     // Loading appointments screen
     } else {
       return(

@@ -17,7 +17,11 @@ class AddAppointmentModal extends Component {
   }
 
   _addAppointment(){
-    return;
+    this.props.self.addAppointment(
+      this.state.Name,
+      this.state.Time,
+      this.state.PhoneNumber
+    );
   };
 
   _exitModal(){
