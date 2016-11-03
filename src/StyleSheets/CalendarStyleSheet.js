@@ -15,7 +15,9 @@ module.exports = StyleSheet.create({
 	},
 
 	li: {
-		flex: 2,
+		flex: 1,
+		flexDirection: 'row',
+		justifyContent: 'space-between',
 		paddingLeft: 10,
 		paddingRight: 5,
 		paddingTop: 20,
@@ -24,6 +26,11 @@ module.exports = StyleSheet.create({
 		borderBottomColor: '#dddddd',
 		borderTopLeftRadius: 20,
 		borderTopRightRadius: 20,
+	},
+
+	delete: {
+		paddingRight: 10,
+		paddingTop: 10,
 	},
 
 	loadingText: {

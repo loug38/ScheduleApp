@@ -25,18 +25,29 @@ module.exports = StyleSheet.create({
 
 	modalTitle: {
 		fontSize: 20,
-		marginBottom: 15,
-		paddingLeft: 20,
+		marginBottom: 10,
+		alignSelf: 'center',
 	},
 
 	modalInputRow: {
 		flex: 1,
 		flexDirection: 'row',
 		alignItems: 'flex-start',
+		justifyContent: 'space-between',
 		marginTop: 10,
 		marginBottom: 10,
 		paddingLeft: 20,
 		paddingRight: 20,
+	},
+
+	iconContainer: {
+		height: 35,
+		width: 35,
+		borderRadius: 25,
+		backgroundColor: '#B71C1C',
+		marginTop: 10,
+		paddingLeft: 3,
+		paddingTop: 3,
 	},
 
 	modalInputWrapper: {
@@ -50,7 +61,7 @@ module.exports = StyleSheet.create({
 		alignItems: 'stretch',
 		justifyContent: 'flex-end',
 		marginTop: 30,
-		marginBottom: -3,
+		marginBottom: -8,
 	},
 
 	modalButtonCancel: {
