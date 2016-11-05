@@ -95,6 +95,7 @@ class CalendarScreen extends Component{
     if (time[0] == 12) {
       ampm = 'PM';
     }
+    
     return (
       <View style={styles.li}>
         <Text>
