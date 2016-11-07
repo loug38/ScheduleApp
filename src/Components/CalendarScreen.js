@@ -18,12 +18,12 @@ class CalendarScreen extends Component{
     super(props);
     var ds = new ListView.DataSource({rowHasChanged: (r1,r2) => r1 != r2});
     this.state = {
-      date: moment().format(),
+      date: moment().format().split('T')[0],
       dataSource: ds,
       modalEnable: false,
       newAptName: null,
     };
-    this.itemsRef = this.getRef().child('appointments');
+    this.itemsRef = this.getRef().child('appointments/' + this.state.date);
   }
 
   getRef(){
@@ -66,7 +66,9 @@ class CalendarScreen extends Component{
   }
 
   onDateSelect(date){
-    this.setState({date: date});
+    this.setState({date: (date.split('T')[0])});
+    this.itemsRef = this.getRef().child('appointments/' + date.split('T')[0]);
+    this.listenForItems(this.itemsRef);
   }
 
   onAddAppointment(){
