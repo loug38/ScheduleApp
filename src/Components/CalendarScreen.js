@@ -12,6 +12,7 @@ import AddAppointmentModal from './AddAppointmentModal';
 var styles = require('../StyleSheets/CalendarStyleSheet');
 var fetched = false;
 var statusBarHeight = null;
+var events = [];
 
 class CalendarScreen extends Component{
   constructor(props) {
@@ -22,7 +23,9 @@ class CalendarScreen extends Component{
       dataSource: ds,
       modalEnable: false,
       newAptName: null,
+      loadEvents: null,
     };
+    this.datesRef = this.getRef().child('dates');
     this.itemsRef = this.getRef().child('appointments/' + this.state.date);
   }
 
@@ -32,6 +35,18 @@ class CalendarScreen extends Component{
 
   componentDidMount() {
     this.listenForItems(this.itemsRef);
+    this.listenForEvents(this.datesRef);
+  }
+
+  listenForEvents(datesRef) {
+    datesRef.on('value', (snap) => {
+      snap.forEach((child) => {
+        events.push(
+          child.val().Date
+        );
+      });
+      this.setState({loadEvents: true});
+    });
   }
 
   listenForItems(itemsRef) {
@@ -46,21 +61,22 @@ class CalendarScreen extends Component{
           Time: child.val().Time,
         });
       });
-
       this.setState({
-        dataSource: this.state.dataSource.cloneWithRows(items)
+        dataSource: this.state.dataSource.cloneWithRows(items),
       });
     });
     fetched = true;
   }
 
   addAppointment(name, time, phone) {
-    let justDate = this.state.date.split('T')
     this.itemsRef.push({
       Name: name,
       Time: time,
       Phone: phone,
-      Date: justDate[0],
+      Date: this.state.date,
+    });
+    this.datesRef.push({
+      Date: this.state.date,
     });
     this.setState({modalEnable: false});
   }
@@ -69,6 +85,7 @@ class CalendarScreen extends Component{
     this.setState({date: (date.split('T')[0])});
     this.itemsRef = this.getRef().child('appointments/' + date.split('T')[0]);
     this.listenForItems(this.itemsRef);
+    this.listenForEvents(this.datesRef);
   }
 
   onAddAppointment(){
@@ -91,10 +108,10 @@ class CalendarScreen extends Component{
       time[0] -= 12; 
       ampm = 'PM';
     }
-    if (time[0] < 12) {
+    else if (time[0] < 12) {
       ampm = 'AM';
     }
-    if (time[0] == 12) {
+    else if (time[0] == 12) {
       ampm = 'PM';
     }
     
@@ -123,6 +140,8 @@ class CalendarScreen extends Component{
           <Calendar onDateSelect={(date) => this.onDateSelect(date)}
                     weekStart={0}
                     showControls={true}
+                    showEventIndicators={true}
+                    eventDates={events}
           />
           <ListView dataSource={this.state.dataSource}
                     renderRow={(feedRow) => { return this._renderRow(feedRow)}}
@@ -144,6 +163,8 @@ class CalendarScreen extends Component{
           <Calendar onDateSelect={(date) => this.onDateSelect(date)}
                     weekStart={0}
                     showControls={true}
+                    showEventIndicators={true}
+                    eventDates={events}
           />
           <View style={{flex: 1, backgroundColor: '#ffffff'}}>
             <Text style={styles.loadingText}> Loading your appointments. </Text>
