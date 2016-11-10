@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, ListView, StatusBar, 
-        Modal, TextInput, Platform, TouchableOpacity} from 'react-native';
+        Modal, TextInput, Platform, TouchableOpacity,
+        LayoutAnimation} from 'react-native';
 
 import Calendar from 'react-native-calendar';
 import {Button, Spinner} from 'native-base';
@@ -34,6 +35,7 @@ class CalendarScreen extends Component{
   }
 
   componentDidMount() {
+    LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
     this.listenForItems(this.itemsRef);
     this.listenForEvents(this.datesRef);
   }
@@ -61,6 +63,7 @@ class CalendarScreen extends Component{
           Time: child.val().Time,
         });
       });
+      LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
       this.setState({
         dataSource: this.state.dataSource.cloneWithRows(items),
       });
@@ -82,6 +85,7 @@ class CalendarScreen extends Component{
   }
 
   onDateSelect(date){
+    LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
     this.setState({date: (date.split('T')[0])});
     this.itemsRef = this.getRef().child('appointments/' + date.split('T')[0]);
     this.listenForItems(this.itemsRef);
@@ -101,6 +105,8 @@ class CalendarScreen extends Component{
   }
 
   _renderRow(feedRow){
+    LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
+
     let time = feedRow.Time.split(':');
     var ampm = null;
 

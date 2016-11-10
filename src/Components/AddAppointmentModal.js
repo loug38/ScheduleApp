@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, TextInput, Modal} from 'react-native';
+import {View, Text, TextInput, Modal, LayoutAnimation} from 'react-native';
 
 import {Button, Input, InputGroup} from 'native-base';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -31,6 +31,7 @@ class AddAppointmentModal extends Component {
       this.setState({errorMessage: 'A phone number is required'});
       return;
     }
+
     this.props.self.addAppointment(
       this.state.Name,
       this.state.Time,
@@ -44,6 +45,7 @@ class AddAppointmentModal extends Component {
   }
 
   render(){
+    LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);    
     return(
       <Modal animationType={"slide"}
              transparent={true}
