@@ -127,7 +127,11 @@ class CalendarScreen extends Component{
           {`Name: ${feedRow.Name}\nDate: ${feedRow.Date}\nTime: ${time[0]}:${time[1]} ${ampm}\nPhone: ${feedRow.Phone}`}
         </Text>
         <TouchableOpacity onPress={() => {this.onDeleteAppointment(feedRow)}}>
-          <MaterialIcons name="delete" size={40} color='#B71C1C' style={styles.delete} />
+          <MaterialIcons name="delete" 
+                         size={40} 
+                         color='#B71C1C' 
+                         style={styles.delete} 
+          />
         </TouchableOpacity>
       </View> 
     );
@@ -154,7 +158,9 @@ class CalendarScreen extends Component{
                     enableEmptySections={true}
                     style={styles.listView}
           />
-          <Button style={styles.addButton} onPress={() => {this.onAddAppointment()}}>
+          <Button style={styles.addButton} 
+                  onPress={() => {this.onAddAppointment()}}
+          >
             Add Appointment 
           </Button>
         </View>
@@ -176,7 +182,9 @@ class CalendarScreen extends Component{
             <Text style={styles.loadingText}> Loading your appointments. </Text>
             <Spinner color='#B71C1C' />
             <View style={styles.listView} />
-            <Button style={styles.addButton} onPress={() => {this.onAddAppointment()}}>
+            <Button style={styles.addButton}
+                    onPress={() => {this.onAddAppointment()}}
+            >
               Add Appointment 
             </Button>
           </View>
