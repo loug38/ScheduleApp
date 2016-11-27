@@ -4,8 +4,10 @@ import {View, Text, TextInput, Modal, LayoutAnimation} from 'react-native';
 import {Button, Input, InputGroup} from 'native-base';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import DatePicker from 'react-native-datepicker';
+import Contacts from 'react-native-contacts';
 
 var styles = require('../StyleSheets/AddAppointmentModalStyleSheet');
+var contacts = null;
 
 class AddAppointmentModal extends Component {
   constructor(props) {
@@ -38,6 +40,19 @@ class AddAppointmentModal extends Component {
       this.state.PhoneNumber
     );
   };
+
+  _addFromContacts(){
+    console.log('Getting Contacts');
+
+    Contacts.getAll((err, tempContacts) => {
+      if (err && err.type === 'permissionDenied') {
+        console.error(err);
+      } else {
+        contacts = tempContacts;
+        console.log(tempContacts);
+      }
+    });
+  }
 
   _exitModal(){
     this.props.self.closeModal();
@@ -113,6 +128,15 @@ class AddAppointmentModal extends Component {
                   />
                 </InputGroup>
               </View>
+            </View>
+
+            {/* Add from contacts */}
+            <View style={styles.addContactsWrapper}>
+              <Button style={styles.addFromContactsButton}
+                      onPress={() => this._addFromContacts()}
+              >
+                Import from Contacts
+              </Button>
             </View>
 
             {/* Buttons on the bottom */}

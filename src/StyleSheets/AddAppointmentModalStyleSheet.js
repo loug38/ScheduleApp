@@ -55,6 +55,21 @@ module.exports = StyleSheet.create({
 		marginLeft: 10,
 	},
 
+	addContactsWrapper: {
+		flex: 1,
+		flexDirection: 'row',
+		justifyContent: 'center',
+		alignItems: 'center',
+		marginTop: 10,
+		marginLeft: 20,
+		marginRight: 20,
+	},
+
+	addFromContactsButton: {
+		flex: 1,
+		backgroundColor: '#B71C1C',
+	},
+
 	buttonContainer: {
 		flex: 1,
 		flexDirection: 'row',
