@@ -89,7 +89,6 @@ class CalendarScreen extends Component{
     this.setState({date: (date.split('T')[0])});
     this.itemsRef = this.getRef().child('appointments/' + date.split('T')[0]);
     this.listenForItems(this.itemsRef);
-    this.listenForEvents(this.datesRef);
   }
 
   onAddAppointment(){
@@ -104,8 +103,18 @@ class CalendarScreen extends Component{
     this.setState({modalEnable: false});
   }
 
+  onDeleteAppointment(rowData){
+    var newEvents;
+    for (var i = 0; i < events.length; i++){
+      if (rowData.Date == events[i]) {
+        this.datesRef.child(events[i]).remove();
+      }
+    }
+    this.itemsRef.child(rowData._key).remove();
+  }
+
   _renderRow(feedRow){
-    LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
+    LayoutAnimation.spring();
 
     let time = feedRow.Time.split(':');
     var ampm = null;
@@ -145,19 +154,23 @@ class CalendarScreen extends Component{
         <View style={styles.container}>
           {/* Pass it "this" so it has a reference to the parent state */}
           <AddAppointmentModal modalEnable={this.state.modalEnable} self={this}/>
+          {/* Status bar*/}
           <StatusBar barStyle='light-content' />
           <View style={{height: statusBarHeight, backgroundColor: "#B71C1C"}} />
+
           <Calendar onDateSelect={(date) => this.onDateSelect(date)}
                     weekStart={0}
                     showControls={true}
                     showEventIndicators={true}
                     eventDates={events}
           />
+
           <ListView dataSource={this.state.dataSource}
-                    renderRow={(feedRow) => { return this._renderRow(feedRow)}}
+                    renderRow={(feedRow) => {return this._renderRow(feedRow)}}
                     enableEmptySections={true}
                     style={styles.listView}
           />
+
           <Button style={styles.addButton} 
                   onPress={() => {this.onAddAppointment()}}
           >
