@@ -4,8 +4,8 @@ import {View, Text, TextInput, Modal, LayoutAnimation} from 'react-native';
 import {Button, Input, InputGroup} from 'native-base';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import DatePicker from 'react-native-datepicker';
-import Contacts from 'react-native-contacts';
 
+var Contacts = require('react-native-contacts');
 var styles = require('../StyleSheets/AddAppointmentModalStyleSheet');
 var contacts = null;
 
